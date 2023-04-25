@@ -218,6 +218,7 @@ struct node* reverse(struct node*i){
 //        }
     
 }
+
 void show(){
     if(head==NULL){
         printf("List is empty.");
@@ -230,11 +231,50 @@ void show(){
         }
     }
 }
+void replace(){
+    int val,r;
+    if(head==NULL){
+        printf("\nsince, List is empty");
+        printf("\nenter a element to insert : ");
+        scanf("%d",&val);
+        insert_f(val);
+        printf("\nInserted value in list : ");
+        show();
+    }
+    else{
+        printf("\nenter the value to be replaced : ");
+        scanf("%d",&val);
+        printf("enter the new value : ");
+        scanf("%d",&r);
+        
+        struct node*tem = (struct node* )malloc(sizeof(struct node));
+        tem->d=r;
+        tem->n=NULL;
+        
+        struct node* i =head;
+        struct node* j= head;
+        if (i->d==val){
+             tem->n=i->n;
+             head= tem;
+        }
+        else{
+        while(i!=NULL){
+            if(i->d==val){
+                tem->n=i->n;
+                j->n=tem;
+                break; //to stop after the first occurance
+            }
+            j=i;
+            i=i->n;
+        }
+        }
+    }
+}
 
 int main() {
    int c,val;
-   while(c!=11){
-       printf("\n1.insert_first\n2.insert_last\n3.delete_first\n4.delete_last\n5.show\n6.delete_random\n7.insert_random\n8.search\n9.sorting\n10.reverse\n11.exit\n");
+   while(c!=12){
+       printf("\n1.insert_first\n2.insert_last\n3.delete_first\n4.delete_last\n5.show\n6.delete_random\n7.insert_random\n8.search\n9.sorting\n10.reverse\n11.replace\n12.exit\n");
        printf("Enter your choice : ");
        scanf("%d",&c);
 switch(c){
@@ -272,11 +312,14 @@ switch(c){
                 sorting();
                 break;
             case 10: 
-                printf("");
+                printf(" ");
                 struct node* i= head;
                 reverse(i);
                 break;
             case 11:
+                replace();
+                break;
+            case 12:
                 break;
             default:
                 printf("enter a valid number.");
