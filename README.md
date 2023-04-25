@@ -1,2 +1,3 @@
 # Singly-Linked-List-Sorting-Searching-Reversing-Inserting-Deleting-Modifying-data-
-I have created a singly linked list which can be sorted , reversed, searched through nodes in the list.
+ A singly linked list that can be sorted , reversed, searched through nodes in the list.
+ User can add , deleted , modify the values from the list.
