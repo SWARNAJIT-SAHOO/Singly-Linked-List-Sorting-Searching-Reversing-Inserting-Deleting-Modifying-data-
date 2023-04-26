@@ -231,6 +231,21 @@ void show(){
         }
     }
 }
+
+int check(int val){
+    struct node* i =head;
+    int k=0;
+      while( i!=NULL){ 
+            if(i->d==val){
+            	return 1;
+            	k++;
+			}
+            i=i->n;
+        }
+        if(k==0){
+           return 0;
+        }
+}
 void replace(){
     int val,r;
     if(head==NULL){
@@ -244,9 +259,11 @@ void replace(){
     else{
         printf("\nenter the value to be replaced : ");
         scanf("%d",&val);
-        printf("enter the new value : ");
+        check(val);
+        if(check(val)==1){
+        printf("\nenter the new value : ");
         scanf("%d",&r);
-        
+            
         struct node*tem = (struct node* )malloc(sizeof(struct node));
         tem->d=r;
         tem->n=NULL;
@@ -267,6 +284,12 @@ void replace(){
             j=i;
             i=i->n;
         }
+        }
+        }
+        else{
+            printf("\n%d is not in the List.",val);
+            printf("\nenter a valid number.");
+            replace();
         }
     }
 }
@@ -326,6 +349,7 @@ switch(c){
        }
    }
 }
+
 /*OUTPUT -->>
 
 1.insert_first
