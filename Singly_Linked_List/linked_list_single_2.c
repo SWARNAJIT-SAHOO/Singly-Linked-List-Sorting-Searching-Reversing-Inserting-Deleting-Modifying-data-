@@ -326,3 +326,306 @@ switch(c){
        }
    }
 }
+/*OUTPUT -->>
+
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 1
+enter the number to be inserted : 11
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 2
+enter the number to be inserted : 12
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 2
+enter the number to be inserted : 13
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 1
+enter the number to be inserted : 10
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 1
+enter the number to be inserted : 91
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 1
+enter the number to be inserted : 1
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 5
+1-->91-->10-->11-->12-->13-->
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 1
+enter the number to be inserted : 2
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 5
+2-->1-->91-->10-->11-->12-->13-->
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 9
+Enter - 1.Ascending Order
+	2.Descending Order
+enter your choice : 1
+1-->2-->10-->11-->12-->13-->91-->
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 9
+Enter - 1.Ascending Order
+	2.Descending Order
+enter your choice : 2
+91-->13-->12-->11-->10-->2-->1-->
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 11
+enter the value to be replaced : 91
+enter the new value : 14
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 5
+14-->13-->12-->11-->10-->2-->1-->
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 10
+1-->2-->10-->11-->12-->13-->14-->
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 8
+Enter the Number to be Searched : 10
+The number 10 is At 5 Position.
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 5
+14-->13-->12-->11-->10-->2-->1-->
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 4
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 5
+14-->13-->12-->11-->10-->2-->
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 6
+enter the position to be deleted : 1
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 5
+14-->12-->11-->10-->2-->
+1.insert_first
+2.insert_last
+3.delete_first
+4.delete_last
+5.show
+6.delete_random
+7.insert_random
+8.search
+9.sorting
+10.reverse
+11.replace
+12.exit
+Enter your choice : 12
+*/
