@@ -1,7 +1,6 @@
 import java.util.*;
 public class singli_linkedlist {
-    singli_linkedlist node;
-    node head;
+    // singli_linkedlist node;
     class node{
         int data;
         node n;
@@ -10,11 +9,12 @@ public class singli_linkedlist {
             n = null;
         }
     }
+    node head=null;
     Scanner p = new Scanner(System.in);
-        void insert_f(singli_linkedlist l,int val){
+        void insert_f(int val){
             node tem = new node(val);
-            if(l.head==null){
-                l.head = tem;
+            if(head==null){
+                head = tem;
             }
             else{
                 tem.n=head;
@@ -23,13 +23,13 @@ public class singli_linkedlist {
             // System.out.println();
         }
 
-        void insert_l(singli_linkedlist l, int val){
+        void insert_l(int val){
             node tem= new node(val);
-            if(l.head==null){
+            if(head==null){
                  head=tem;
             }
             else{
-                node i = l.head;
+                node i = head;
                 while(i.n!=null){
                     i = i.n;
                 }
@@ -39,12 +39,12 @@ public class singli_linkedlist {
             System.out.println();
         }
 
-        void show(singli_linkedlist l){
-            if(l.head==null){
+        void show(){
+            if(head==null){
                 System.out.println("LIST IS EMPTY .");
             }
             else{
-                node i = l.head;
+                node i = head;
                 while(i!=null){
                     System.out.print(i.data+"-->");
                     i=i.n;
@@ -53,26 +53,26 @@ public class singli_linkedlist {
             System.out.println();
         }
 
-        void delete_f(singli_linkedlist l){
-            if(l.head==null){
+        void delete_f(){
+            if(head==null){
                 System.out.println("List is Empty.");
             }
             else{
-                node i = l.head;
+                node i = head;
                 head=i.n;
                 i.n=null;
             }
         }
 
-        void delete_l(singli_linkedlist l){
-            if(l.head==null){
+        void delete_l(){
+            if(head==null){
                 System.out.println("List is Empty.");
             }
             else{
-                if(l.head.n==null){
+                if(head.n==null){
                     head=null;
                 }else{
-                    node i =l.head;
+                    node i =head;
                     node j=i;
                     while(i.n!=null){
                         j=i;
@@ -83,24 +83,24 @@ public class singli_linkedlist {
             }
         }
 
-        void insert_random(singli_linkedlist l,int val){
+        void insert_random(int val){
             System.out.println();
-            if(l.head==null){
+            if(head==null){
                 System.out.println("List is empty so, -");
-                insert_f(l,val);
+                insert_f(val);
             }
             else{
                 node tem = new node(val);
                 System.out.print("Enter the POSITION to insert : ");
                 int po= p.nextInt();
                 if(po==0){
-                    tem.n=l.head;
-                    l.head=tem;
+                    tem.n=head;
+                    head=tem;
                 }
                 else{
 
                     int k=1;
-                    node i= l.head;
+                    node i= head;
                     while(k<po){
                         k++;
                         i=i.n;
@@ -117,17 +117,17 @@ public class singli_linkedlist {
             System.out.println();
         }
 
-        void delete_random(singli_linkedlist l){
+        void delete_random(){
             System.out.println();
-            if(l.head==null){
+            if(head==null){
                 System.out.println("List is Empty.");
             }
             else{
                 System.out.print("Enter a the POSITION to DELETE : ");
                 int po = p.nextInt();
-                node i = l.head;
+                node i = head;
                 if(po==1){
-                    delete_f(l);
+                    delete_f();
                 }
                 else{
                     node j = i;
@@ -149,15 +149,15 @@ public class singli_linkedlist {
         }
 
         
-        void search(singli_linkedlist l){
-            if(l.head==null){
+        void search(){
+            if(head==null){
                 System.out.println("List is Empty.");
             }
             else{
                 System.out.print("Enter the number to SEARCH : ");
                 int n1 = p.nextInt();
                 int po=1,k=0;
-                node i =l.head;
+                node i =head;
                 while(i.data!=n1){
                     i=i.n;
                     po++;
@@ -165,7 +165,7 @@ public class singli_linkedlist {
                         System.out.println();
                         System.out.println(n1+"--INVALID NUMBER");
                         System.out.println("Enter a valid Number.");
-                        search(l);
+                        search();
                         k=1;
                         break;
                     }
@@ -175,33 +175,33 @@ public class singli_linkedlist {
                 }
             }
         }
-        node rev(singli_linkedlist l,node i){
+        node rev(node i){
             if(i.n==null){
                 System.out.print(i.data+"-->");
                 return i;
             }
             else{
                 // i=i.n;
-                rev(l,i.n);
+                rev(i.n);
                 System.out.print(i.data+"-->");
                 
             }
             return i;
         }
-        void reverse(singli_linkedlist l){
-            if(l.head==null){
+        void reverse(){
+            if(head==null){
                 System.out.println("List is Empty.");
             }
             else{
-                node i = l.head;
+                node i = head;
                 System.out.println("REVERSED LIST : ");
-                rev(l,i);
+                rev(i);
                 System.out.println();
             }
         }
 
-        void replace(singli_linkedlist l){
-            if(l.head==null){
+        void replace(){
+            if(head==null){
                 System.out.println("List is Empty.");
             }
             else{
@@ -210,11 +210,11 @@ public class singli_linkedlist {
                 System.out.print("Enter the NEW value : ");
                 int r= p.nextInt();
                 node tem= new node(r);
-                node i =l.head;
+                node i =head;
                 node j=i;
                 if(i.data==v){
-                    tem.n=l.head.n;
-                    l.head=tem;
+                    tem.n=head.n;
+                    head=tem;
                 }
                 else{
                     while(i.data!=v){
@@ -225,16 +225,16 @@ public class singli_linkedlist {
                     tem.n=i.n;
                 }
                 System.out.println("New List :");
-                show(l);
+                show();
             }
         }
 
-        void acending(singli_linkedlist l){
-            node i=l.head;
+        void acending(){
+            node i=head;
             node j=i;
             int tem;
             System.out.println();
-            for(i=l.head;i!=null;i=i.n){
+            for(i=head;i!=null;i=i.n){
                 for(j=i;j!=null;j=j.n){
                     if(i.data>j.data){
                         tem = i.data;
@@ -247,12 +247,12 @@ public class singli_linkedlist {
             System.out.println();
         }
 
-        void decending(singli_linkedlist l){
-            node i=l.head;
+        void decending(){
+            node i=head;
             node j=i;
             int tem;
             System.out.println();
-            for(i=l.head;i!=null;i=i.n){
+            for(i=head;i!=null;i=i.n){
                 for(j=i;j!=null;j=j.n){
                     if(i.data<j.data){
                         tem = i.data;
@@ -265,8 +265,8 @@ public class singli_linkedlist {
             System.out.println();
         }
         
-        void sorting(singli_linkedlist l){
-            if(l.head==null){
+        void sorting(){
+            if(head==null){
                 System.out.println("List is Empty.");
             }
             else{
@@ -275,14 +275,14 @@ public class singli_linkedlist {
                 System.out.print("Enter your choice : ");
                 int c =p.nextInt();
                 if(c==1){
-                    acending(l);
+                    acending();
                 }
                 else if(c==2){
-                    decending(l);
+                    decending();
                 }
                 else{
                     System.out.println("Enter valid Option.");
-                    sorting(l);
+                    sorting();
                 }
             }
         }
@@ -307,43 +307,43 @@ public class singli_linkedlist {
                 case 1:
                 System.out.print("enter the number to be inserted : ");
                 val = sc.nextInt();
-                list.insert_f(list,val);
+                list.insert_f(val);
                 break;
             case 2:
                 System.out.print("enter the number to be inserted : ");
                 val = sc.nextInt();
-                list.insert_l(list,val);
+                list.insert_l(val);
                 break;
             case 3:
-                list.delete_f(list);
+                list.delete_f();
                 break;
             case 4:
-                list.delete_l(list);
+                list.delete_l();
                 break;
             case 5:
-                 list.show(list);
+                 list.show();
                 break;
             case 6:
-                 list.delete_random(list);
+                 list.delete_random();
                 break;
             case 7:
                 System.out.print("enter the number to be inserted : ");
                 val = sc.nextInt();
-                 list.insert_random(list,val);
+                 list.insert_random(val);
                 break;
             case 8:
-                 list.search(list);
+                 list.search();
                 break;
             case 9:
-                 list.sorting(list);
+                 list.sorting();
                 break;
             case 10:
                 
                 System.out.print(" ");
-                 list.reverse(list);
+                 list.reverse();
                 break;
             case 11:
-                 list.replace(list);
+                 list.replace();
                 break;
             case 12:
                 break;
@@ -355,6 +355,8 @@ public class singli_linkedlist {
     
     }
 }
+
+
 //OUPUT
 /*
 *-----------------------*
